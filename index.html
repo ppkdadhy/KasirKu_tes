@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
     <!-- <script src="js/script.js"></script> -->
   </head>
@@ -275,7 +275,10 @@
               dataAktif = dataAktif.filter((item) => item.id !== idData);
 
               // Perbarui data di localStorage
-              localStorage.setItem("dataFormProduk", JSON.stringify(dataAktif));
+              localStorage.setItem(
+                "dataFormProduk",
+                JSON.stringify(dataAktif),
+              );
 
               // Hapus baris tabel dari tampilan browser
               btnDelete.closest("tr").remove();
