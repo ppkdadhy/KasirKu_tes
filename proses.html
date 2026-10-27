@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KasirKu - Kasir Transaksi</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span>KasirKu</span>
+        <span class="status-badge">• Toko Berkah Warung - Buka</span>
+      </div>
+      <nav class="main-nav">
+        <a href="proses.html" class="active">Kasir Transaksi</a>
+        <a href="index.html">Daftar Produk</a>
+        <a href="form.html">Tambah Produk</a>
+      </nav>
+      <div class="nav-user">
+        <div class="user-profile">
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100"
+            class="user-avatar"
+            alt="Mbak Sri"
+          />
+          <div>
+            <strong>Mbak Sri (Kasir)</strong><br />
+            <small style="color: var(--warna-teks-muted)">Admin & Kasir</small>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div style="margin-bottom: 16px; display: flex; gap: 8px">
+        <input
+          type="text"
+          placeholder="🔍 Cari nama barang, barcode (EAN-13)... [Tekan F2]"
+          style="flex: 1"
+        />
+        <button class="btn-secondary">📷 Scan Kamera</button>
+      </div>
+
+      <div class="grid-2col">
+        <div>
+          <div class="product-card-grid">
+            <div class="product-card">
+              <span class="stock-tag">Stok 120</span>
+              <img
+                src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=300"
+              />
+              <div class="product-card-body">
+                <small style="color: var(--warna-teks-muted)">MIE INSTAN</small>
+                <div style="font-weight: 700; font-size: 13px">
+                  Indomie Goreng...
+                </div>
+                <div style="font-weight: 800; margin-top: 4px">Rp 3.100</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <span class="stock-tag">Stok 18 sak</span>
+              <img
+                src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300"
+              />
+              <div class="product-card-body">
+                <small style="color: var(--warna-teks-muted)">SEMBAKO</small>
+                <div style="font-weight: 700; font-size: 13px">
+                  Beras Ramos Premiu...
+                </div>
+                <div style="font-weight: 800; margin-top: 4px">Rp 68.500</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <span class="stock-tag" style="background: var(--warna-warning)"
+                >Sisa 9 kg</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=300"
+              />
+              <div class="product-card-body">
+                <small style="color: var(--warna-teks-muted)">SEMBAKO</small>
+                <div style="font-weight: 700; font-size: 13px">
+                  Telur Ayam Negeri...
+                </div>
+                <div style="font-weight: 800; margin-top: 4px">Rp 28.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Panel Keranjang -->
+        <div
+          style="
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--warna-border);
+          "
+        >
+          <h3>
+            🛒 Keranjang Belanja <span class="badge badge-warning">4 Item</span>
+          </h3>
+
+          <div
+            style="
+              margin: 16px 0;
+              border-bottom: 1px solid var(--warna-border);
+              padding-bottom: 12px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-weight: 600;
+              "
+            >
+              <span>Beras Ramos Premium</span>
+              <span>Rp 68.500</span>
+            </div>
+            <small style="color: var(--warna-teks-muted)"
+              >Rp 68.500 / sak</small
+            >
+          </div>
+
+          <div
+            style="
+              margin-bottom: 16px;
+              border-bottom: 1px solid var(--warna-border);
+              padding-bottom: 12px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-weight: 600;
+              "
+            >
+              <span>Telur Ayam Negeri</span>
+              <span>Rp 28.000</span>
+            </div>
+            <small style="color: var(--warna-teks-muted)">Rp 28.000 / kg</small>
+          </div>
+
+          <div
+            style="
+              background: #f8fafc;
+              padding: 12px;
+              border-radius: var(--radius);
+              margin-bottom: 16px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+              "
+            >
+              <span>Subtotal Belanja</span>
+              <span>Rp 117.100</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 18px;
+                font-weight: 800;
+                margin-top: 8px;
+              "
+            >
+              <span>TOTAL TAGIHAN</span>
+              <span style="color: #000">Rp 116.600</span>
+            </div>
+          </div>
+
+          <button
+            class="btn-primary"
+            style="width: 100%; padding: 14px; font-size: 16px"
+          >
+            ✔ Bayar (Rp 116.600)
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>KasirKu POS Warung • Versi 2.4.0 (Kilat Retail UMKM)</div>
+    </footer>
+  </body>
+</html>
